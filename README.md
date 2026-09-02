@@ -20,7 +20,7 @@ Desarrollar habilidades en la creación de aplicaciones móviles multiplataforma
 
 | Proyecto | Descripción | Nivel | Enlace al Código |
 |---------|-------------|-------|------------------|
-| `01_hola_mundo` | Primer proyecto: app básica con texto, botón y estado simple. | 🔹 Básico | [Ver código](./01_hola_mundo/) |
+| `01_hola_mundo` | Primer proyecto: app básica con texto, botón y estado simple, proyecto demostración de Flutter. | 🔹 Básico | [Ver código](./untitled/) |
 <!--
 | `02_calculadora` | Implementación de una calculadora funcional con diseño responsivo. | 🔹 Básico | [Ver código](./02_calculadora/) |
 | `03_clima_app` | App que consume una API REST (OpenWeatherMap) para mostrar el clima en tiempo real. | 🔸 Intermedio | [Ver código](./03_clima_app/) |
