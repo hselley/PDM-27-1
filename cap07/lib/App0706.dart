@@ -76,9 +76,54 @@ class _MyHomePageState extends State<MyHomePage> {
     );
   }
 
+  /// Build
+  Widget _buildRelationshipDropdown() {
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        Text("What kind of relationship are you looking for?"),
+        _buildDropdownButtonRow(),
+      ],
+    );
+  }
 
+  Widget _buildDropdownButtonRow() {
+    return Row(
+      mainAxisAlignment: MainAxisAlignment.start,
+      children: [
+        DropdownButton(
+          items: _relationshipList,
+          onChanged: _updateRelationshipDropdown,
+          value: _relationshipDropdownValue,
+          hint: Text("Select one"),
+        ),
+        if(_relationshipDropdownValue != null)
+          ElevatedButton(
+            onPressed: _reset,
+            child: Text("Reset", style: TextStyle(color: Colors.blue),),
+          )
+      ],
+    );
+  }
 
+  Widget _buildResultsImage() {
+    if(_relationshipDropdownValue != null) {
+      return Image.asset((_relationshipDropdownValue!.index>2) ? "assets/Heart.png" : "assets/BrokenHeart.png");
+    } else {
+      return SizedBox();
+    }
+  }
 
+  /// Actions
+  void _reset() {
+    setState(() {
+      _relationshipDropdownValue = null;
+    });
+  }
 
-
+  void _updateRelationshipDropdown(Relationship? newValue) {
+    setState(() {
+      _relationshipDropdownValue = newValue;
+    });
+  }
 }
