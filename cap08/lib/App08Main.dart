@@ -2,7 +2,7 @@
 // Aplicación reseña de películas
 
 import 'package:flutter/material.dart';
-import 'App0802.dart';
+import 'App0805.dart';
 
 void main() => runApp(App08Main());
 
@@ -53,7 +53,8 @@ class DetailPage extends StatelessWidget {
       appBar: AppBar(title: Text("Details"),),
       body: Padding(
         padding: EdgeInsets.all(16.0),
-        child: Center(child: buildDetailPageCore(context),),
+        child: Center(child: buildDetailPageCore(context),
+        )
       )
     );
   }

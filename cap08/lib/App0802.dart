@@ -32,7 +32,7 @@ extension MoreDetailPage on DetailPage {
       children: [
         Text(overview),
         SizedBox(height: 25.0,),
-        Image.asset('assets/malkovich.webp'),
+        Image.asset('assets/malkovich.webp', height: 400,),
       ],
     );
   }
