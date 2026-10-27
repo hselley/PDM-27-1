@@ -27,13 +27,15 @@ extension MoreMovieTitlePage on MovieTitlePageState {
 
 extension MoreDetailPage on DetailPage {
   Widget buildDetailPageCore(context) {
-    return Column(
-      crossAxisAlignment: CrossAxisAlignment.center,
-      children: [
-        Text(overview),
-        SizedBox(height: 25.0,),
-        Image.asset('assets/malkovich.webp', height: 400,),
-      ],
+    return ListView(
+        children: [
+          Text(overview, textScaler: TextScaler.linear(1.5), textAlign: TextAlign.justify,),
+          SizedBox(height: 25.0,),
+          Image.asset(
+            'assets/malkovich.webp',
+            //height: 500,
+          ),
+        ],
     );
   }
 }
